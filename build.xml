@@ -1,0 +1,4 @@
+<project name="zitego.customer" default="compile" basedir=".">
+ <import file="nbproject/build-impl.xml"/>
+
+</project>

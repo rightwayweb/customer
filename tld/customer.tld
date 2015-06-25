@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE taglib PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.1//EN" "http://java.sun.com/j2ee/dtds/web-jsptaglibrary_1_1.dtd">
+
+<!-- Zitego Customer tags -->
+
+<taglib>
+ <tlibversion>1.0</tlibversion>
+ <jspversion>1.1</jspversion>
+ <shortname>customer</shortname>
+
+ <tag>
+  <name>obj</name>
+  <tagclass>com.zitego.customer.jsp.CustomerTag</tagclass>
+  <teiclass>com.zitego.customer.jsp.CustomerTagExtraInfo</teiclass>
+  <info>Grabs a customer object out of the session from a CustomerHolder given a session attribute id.</info>
+  <attribute>
+   <name>id</name>
+   <required>true</required>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <name>attributeName</name>
+   <required>true</required>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+ </tag>
+ <tag>
+  <name>isPaying</name>
+  <tagclass>com.zitego.customer.jsp.IsPayingCustomerTag</tagclass>
+  <info>Determines whether a customer is paying and if not, sends them to an information collection screen.</info>
+  <attribute>
+   <name>attributeName</name>
+   <required>true</required>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <name>billingPage</name>
+   <required>false</required>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+ </tag>
+
+</taglib>
